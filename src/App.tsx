@@ -83,16 +83,10 @@ function App() {
     )
       return;
 
-    // let add,
-    //   pending = pendingTodos,
-    //   done = doneTodos;
-
     if (
       source.droppableId === "Todos" &&
       destination.droppableId === "DoneTodos"
     ) {
-      // add = pending[source.index];
-      // pending.splice(source.index, 1);
       dispatch({
         type: "done",
         payload: {
@@ -105,8 +99,6 @@ function App() {
       destination.droppableId === "Todos" &&
       source.droppableId === "DoneTodos"
     ) {
-      // add = pending[source.index];
-      // pending.splice(source.index, 1);
       dispatch({
         type: "done",
         payload: {
@@ -114,14 +106,6 @@ function App() {
         },
       });
     }
-
-    // if (destination.droppableId === "Todos") {
-    //   pending.splice(source.index, 0, add);
-    // } else {
-    //   done.splice(source.index, 0, add);
-    // }
-
-    console.log(result);
   }
 
   return (
